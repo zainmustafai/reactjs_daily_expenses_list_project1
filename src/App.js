@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Expenses from "./components/Expenses";
+import NewExpense from "./components/UserInput/NewExpense";
+import { useState } from "react";
 
 function App() {
+  const addExpenseHandler = (expenseData) => {
+    console.log(expenseData);
+    setExpenseItems([expenseData, ...expenseItems]);
+  };
+
+  const [expenseItems, setExpenseItems] = useState([]);
+  const deletedIdHandler = (takenID) => {
+      console.log("Delete Button Pressed!");    
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NewExpense onAddNewExpenseListener={addExpenseHandler} />
+      <Expenses listItem={expenseItems} deletedIdListener={deletedIdHandler} />
     </div>
   );
 }

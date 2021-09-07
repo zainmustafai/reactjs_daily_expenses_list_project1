@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+}
+
+.container{
+
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: cadetblue;
+
+}
+.container h1{
+    color: white;
+}

@@ -1,0 +1,22 @@
+
+.form-container{
+    color: white;
+    margin: 0 20px;
+    text-align: center;
+    padding: 10px;
+    height: 40vh;
+    width: auto;
+    background-color: magenta;
+    flex-direction: column;
+    align-content: center;
+}
+.form-container button{
+    margin-top: 20px;
+    top: 20px;
+    background-color: slateblue;
+   
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
